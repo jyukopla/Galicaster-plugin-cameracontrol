@@ -78,7 +78,8 @@ def load_ui(element):
     label_style(label3, True)
     label_style(label1, True, 12)
     label_style(label4, True, 12)
-    notebook.append_page(notebook2,label)
+    notebook.insert_page(notebook2,label,0)
+    notebook.set_current_page(0)
     builder.connect_signals(event_handler)
 
     speed_zoom = builder.get_object("adjustment1")
